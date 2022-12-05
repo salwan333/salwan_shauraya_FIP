@@ -1,0 +1,432 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*Remove this rule on your HTML elements as you start to fill them with content*/
+
+.box-color {
+	color: #888;
+	background: #fff;
+	text-align: left;
+	margin: 0;
+}
+
+/*basic reset*/
+
+/*browsers have built in values for elements so we'll reset a few things to zero, you can add to this or remove items as needed*/
+
+div,p,body,header,footer,section,article,nav { 
+	margin: 0; 
+	padding: 0; 
+}	
+
+img { 
+	border: none; /*Remove border if image is a link*/
+	margin: 0; 
+	padding: 0; 
+}
+
+/*html selectors*/
+
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	background-color: #ddd;
+}
+
+/* Remove underlines from links */
+
+a {
+	text-decoration: none;
+}
+
+/*hide elements from browser but show for doc outline*/
+
+.hidden {
+	display: none;
+}
+
+
+/*Common page elements  */
+
+/*This is essentially a box that we place the whole site in.  
+We center the box using margin 0 auto and give it a fixed width of 428px.
+428px would fit some phones. Sizes will vary depending on the projects
+you work on and the intended audience, we may go as low as 320px */
+
+#container {
+	margin: 0 auto;
+	width: 428px;
+	background-color: #fff;
+}
+
+
+/* this is our grid based off of our XD file */
+.grid-con {
+	display: grid;
+	grid-template-columns: repeat(4, 85px);
+	grid-column-gap: 16px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.grid-con span {
+	font-size:30px;
+	font-weight:bold;
+	text-align:center;
+	padding: 3px;
+	cursor:pointer
+}
+
+#header-con {
+	background-color: #fff;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#header-logo {
+	grid-column: 1/3;
+}
+
+#mobile-nav {
+	grid-column: 4/-1;
+}
+
+.burger {
+	height: 6px;
+	background-color:#f00;
+	display: block;
+	margin-bottom: 10px;
+}
+
+/* index page */
+
+#hero-con {
+	background-color: #aaaaaa;
+	background: url("../images//mobile_images/img1.jpeg");
+	height: 458px;
+}
+
+#hero-text {
+	grid-column: 1/-1;
+	/* Remove as content will dictate height */
+	height: 380px;
+	margin-top: 20px;
+	display:none;
+}
+
+#image-slider-con {
+	
+	/* Remove as content will dictate height */
+	height: 640px;
+	position: relative;
+	margin-top:10px;
+	margin-bottom: 10px;
+}
+
+#image-slider-con h2 {
+	background-color: #ffffff;
+	text-align: center;
+	padding-top: 70px;
+	padding-bottom: 70px;
+	margin: 0;
+}
+
+#mobile-slider-left {
+	position: absolute;
+	left: 0;
+	font-size: 120px;
+	color:#fff;
+	top: 50px;
+}
+
+#mobile-slider-right {
+	position: absolute;
+	right: 0;
+	font-size: 120px;
+	color:#fff;
+	top: 50px;
+}
+
+#about-us-con h2 {
+	background-color: #ffffff;
+	text-align: center;
+	padding-top: 70px;
+	padding-bottom: 70px;
+	margin: 0;
+}
+
+#about-us-text-con {
+	background-color: #fff;
+	
+}
+
+
+#about-us-text {
+	grid-column: 1/-1;
+	/* Remove as content will dictate height */
+	height: 580px;
+	margin-top: 70px;
+	margin-bottom: 40px;
+}
+
+.about-us-photo {
+	grid-column: 1/-1;
+	display: block;
+	margin: 20px auto 0 auto;
+}
+
+#contact-us-con {
+	margin-top: 100px;
+	margin-bottom: 60px;
+}
+
+#contact-text {
+	grid-column: 1/-1;
+	/* Remove as content will dictate height */
+	height: 350px;
+	margin-bottom: 150px;
+}
+
+#contact-form {
+	grid-column: 1/-1;
+	/* Remove as content will dictate height */
+	height: 580px;
+}
+
+/*Common page elements  */
+
+#footer-con {
+	height: 500px;
+	background-color: #f00;
+}
+
+#footer-box {
+	margin-top: 40px;
+	/* Remove as content will dictate height */
+	height:45px;
+	grid-column: 1/3;
+	background-color: #ddd;
+	padding-top:10px;
+}
+
+#footer-newsletter {
+	margin-top: 100px;
+	/* Remove as content will dictate height */
+	height:40px;
+	grid-column: 1/-1;
+	background-color: #ddd;
+	text-align:left;
+	padding-top:10px;
+	padding-left:10px;
+}
+
+#footer-newsletter1 {
+	margin-top: 100px;
+	/* Remove as content will dictate height */
+	height: 40px;
+	grid-column: 1/-1;
+	background-color: #f00;
+	text-align: left;
+	padding-top: 10px;
+	padding-left: 10px;
+	color:#fff;
+}
+
+/* gallery page */
+
+#hero-gallery-con {
+	background-color: #fff;
+	/*background: url("https://via.placeholder.com/428x458");*/
+	height: 458px;
+}
+
+#hero-gallery-text {
+	grid-column: 1/-1;
+	/* Remove as content will dictate height */
+	height: 430px;
+	margin-top: 20px;
+	background-image: url("../images/mobile_images/Background.jpg");
+	background-repeat: no-repeat;
+		background-size: 100% 100%;
+		padding:10px;
+}
+
+#gallery-controls {
+	grid-column: 1/-1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+}
+
+.dot {
+	background-color: #dddddd;
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	margin: 5px;
+  }
+
+#gallery h2 {
+	text-align: center;
+	grid-column: 1/-1;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.gallery-box {
+	grid-column: 1/-1;
+	background-color: #ddd;
+	/* Remove as content will dictate height */
+	height: 507px;
+	margin-bottom: 20px;
+}
+
+#footer-newsletter2 {
+	margin-top: 20px;
+	height:40px;
+	grid-column: 1/3;
+	text-align:center;
+	padding-top:10px;
+	cursor:pointer;
+}
+.fa {
+	padding: 5px;
+	font-size: 30px !important;
+	width: 30px;
+	text-align: center;
+	text-decoration: none;
+	margin: 5px 2px;
+	border-radius: 50%;
+	color: #000;
+}
+
+.fa:hover {
+	opacity: 0.7;
+}
+
+.fa-facebook {
+	background: #000;
+	color: #f00;
+	width: 30px;
+	height: 40px;
+
+}
+
+.fa-google {
+	background: #dd4b39;
+	color: white;
+}
+
+
+.fa-youtube {
+	color: #000;
+}
+
+.fa-instagram {
+	color: #000;
+}
+
+.inpt{
+	
+	 font-size: 25px;
+		color: #000;
+		padding-left: 10px;
+		margin-top: 40px;
+		margin-left: 20px;
+		width: 80%;
+		height: 40px;
+		background-color: #f00;
+		
+}
+.inpt2 {
+
+	font-size: 25px;
+	color: #000;
+	padding-left: 10px;
+	margin-top: 40px;
+	margin-left: 20px;
+	width: 80%;
+	height: 100px;
+	background-color: #f00;
+
+}
+.btn-submit{
+	
+	 background-color: #f00;
+		margin-top: 20px;
+		width: 150px;
+		height: 40px;
+		font-weight: bold;
+		margin-left: 20px;
+		font-size: 20px;
+		
+}
+.p-newsletter{
+	margin-top:-50px;font-size:20px;color:#fff;text-align:left;
+}
+.btn-blog{
+	font-size:30px;
+	font-weight:bold;
+	text-align:center;
+	padding-left:30px;
+	cursor:pointer;
+	margin-top:100px;
+}
+.p-healthy{
+	font-size:40px;
+	padding:30px;
+	color: white;
+}
+
+
+
+.txt-white{
+	color:#fff;
+}
+.img-txt{
+	font-size:30px; color:#fff;padding-left:20px;margin-top:5px;
+}
+.h1-services{
+	margin-top:50px;color:#fff;font-size:30px;text-align:center;
+}
+.btn-coaching{
+	background-color:#fff;padding:10px;border:1px solid #000;position:absolute;color:black;margin-top:100px;z-index:4;font-size:30px;margin-left:100px;
+}
+.btn-coaching2 {
+	padding: 10px;
+	position: absolute;
+	color: black;
+	margin-top: 250px;
+	z-index: 4;
+	font-size: 30px;
+	font-weight:bold;
+	margin-left: 100px;
+}
+.btn-coaching3 {
+	padding: 10px;
+	position: absolute;
+	color: black;
+	margin-top: 350px;
+	z-index: 4;
+	font-size: 30px;
+	margin-left: 100px;
+}
+.btn-coaching4 {
+	padding: 10px;
+	position: absolute;
+	color: black;
+	margin-top: 450px;
+	z-index: 4;
+	font-size: 30px;
+	margin-left: 80px;
+}
+.inpt-white {
+	font-size: 25px;
+	width: 60%;
+	margin: auto;
+	margin-top: 80px;
+	margin-left: 50px;
+	padding-left: 20px;
+	background-color: #fff;
+}
+
